@@ -1,0 +1,264 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  min-width: 320px;
+}
+
+h1 {
+  font-size: 3rem; /* 48 */
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 2.25rem; /* 36 */
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.3125rem; /* 21 */
+  font-weight: 300;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  width: 80%;
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left {
+  width: 62%;
+}
+
+.right {
+  width: 32%;
+}
+
+.nav {
+  background: #136c72;
+  padding: 0.5em 0;
+}
+
+.nav .logo {
+  margin-right: 1em;
+}
+
+.nav ul {
+  display: flex;
+  align-items: center;
+}
+
+.nav ul.open {
+  display: flex;
+}
+
+.nav .nav-primary {
+  flex-grow: 1;
+}
+
+.nav li + li {
+  margin-left: 1em;
+}
+
+.nav a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.nav .btn-signup {
+  background: #fff;
+  color: #136c72;
+  padding: 0.25em 1em;
+  border-radius: 50px;
+}
+
+.nav .btn-signup:hover {
+  opacity: 0.7;
+}
+
+.nav ul {
+  list-style: none;
+}
+
+.nav-toggle {
+  display: none;
+  border-radius: 50%;
+  border: 0;
+  width: 3em;
+  height: 3em;
+  background: #072a2d;
+  outline: 0;
+  overflow: hidden;
+  padding: 0 0.5em;
+  position: absolute;
+  left: 0;
+  top: 1em;
+}
+
+.nav-toggle span {
+  display: block;
+  background: #fff;
+  height: 2px;
+  width: 100%;
+  border-radius: 50px;
+}
+
+.nav-toggle span + span {
+  margin-top: 0.3em;
+}
+
+.hero {
+  padding: 100px 0;
+  background-color: #23424a;
+  color: #fff;
+}
+
+.hero p {
+  margin-bottom: 3em;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #23424a;
+  font-weight: 900;
+  background-color: #38cfd9;
+  padding: 0.75em 2em;
+  border-radius: 100px;
+}
+
+.btn:hover,
+.btn:focus {
+  opacity: 0.75;
+}
+
+main {
+  padding: 30px 0;
+}
+
+main .left h2 {
+  color: #136c72;
+}
+
+aside {
+  background: #136c72;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+aside p {
+  margin-bottom: 4rem;
+}
+
+main p {
+  margin-bottom: 2rem;
+}
+
+
+@media (max-width: 768px) {
+
+  .hero .row, main {
+    flex-direction: column;
+  }
+
+  .hero .col, main .col {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero {
+    padding: 50px 0;
+  }  
+
+  .hero .left {
+    order: 2;
+  }
+
+  .hero .right {
+    order: 1;
+    margin-bottom: 1em;
+  }
+
+  .hero .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .nav-toggle {
+    display: block;  
+  }
+  
+  header .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav {
+    padding: 0;
+  }
+
+  .nav .logo {
+    margin-right: 0;
+  }
+
+  .nav .nav-primary, .nav .nav-secondary {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav .nav-secondary {
+    padding-bottom: 1em;
+  }
+
+  .nav li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav li + li {
+    margin-left: 0;
+  }
+
+  .nav a {
+    padding: 1em 0;
+    display: block;
+  }
+
+  .nav .btn-signup {
+    display: inline-block;
+  }
+
+  main.container {
+    width: 100%;
+  }
+
+  main .left {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
