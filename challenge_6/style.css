@@ -51,6 +51,43 @@ img {
   width: 32%;
 }
 
+nav {
+  background: #136c72;
+  padding: 0.5em 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav li {
+  align-items: center;
+}
+
+nav li + li {
+  margin-left: 1em;
+}
+
+nav a {
+  font-size: 0.9rem;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.nav-push-left {
+  margin-left: auto;
+}
+
+nav .btn-signup {
+  background: #fff;
+  color: #136c72;
+  padding: 0.25em 1em;
+  border-radius: 50px;  
+}
+
+
 .hero {
   padding: 100px 0;
   background-color: #23424a;
