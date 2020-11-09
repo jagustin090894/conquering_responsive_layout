@@ -54,11 +54,15 @@ img {
 
 .nav {
   background: #136c72;
-  padding: 0.5em 0;
 }
 
 .nav .logo {
   margin-right: 1em;
+}
+
+.nav .logo:hover {
+  background: transparent;
+  opacity: 0.8;
 }
 
 .nav ul {
@@ -74,8 +78,14 @@ img {
   flex-grow: 1;
 }
 
-.nav li + li {
+.nav .nav-secondary li + li {
   margin-left: 1em;
+}
+
+.nav li {
+  height: 100%;
+  display: flex;
+  align-items: center;  
 }
 
 .nav a {
@@ -83,6 +93,14 @@ img {
   text-transform: uppercase;
   text-decoration: none;
   font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0.5em 0.5em;
+}
+
+.nav a:hover {
+  background: #23424a;
 }
 
 .nav .btn-signup {
@@ -90,6 +108,13 @@ img {
   color: #136c72;
   padding: 0.25em 1em;
   border-radius: 50px;
+  border: 1px solid #fff;
+  height: auto;
+}
+
+.nav .btn-signup:hover {
+  background: transparent;
+  color: #fff;
 }
 
 .nav .btn-signup:hover {
@@ -111,8 +136,11 @@ img {
   overflow: hidden;
   padding: 0 0.5em;
   position: absolute;
-  left: 0;
-  top: 1em;
+  left: 10px;
+  top: 10px;
+  cursor: pointer;
+  /* margin-left: -239px; */
+  z-index: 1;
 }
 
 .nav-toggle span {
@@ -146,11 +174,13 @@ img {
   background-color: #38cfd9;
   padding: 0.75em 2em;
   border-radius: 100px;
+  border: 1px solid #38cfd9;
 }
 
 .btn:hover,
 .btn:focus {
-  opacity: 0.75;
+  background: transparent;
+  color: #38cfd9;
 }
 
 main {
@@ -204,54 +234,6 @@ main p {
   .hero .btn {
     width: 100%;
   }
-}
-
-@media (max-width: 576px) {
-
-  .nav-toggle {
-    display: block;  
-  }
-  
-  header .row {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .nav {
-    padding: 0;
-  }
-
-  .nav .logo {
-    margin-right: 0;
-  }
-
-  .nav .nav-primary, .nav .nav-secondary {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .nav .nav-secondary {
-    padding-bottom: 1em;
-  }
-
-  .nav li {
-    width: 100%;
-    text-align: center;
-  }
-
-  .nav li + li {
-    margin-left: 0;
-  }
-
-  .nav a {
-    padding: 1em 0;
-    display: block;
-  }
-
-  .nav .btn-signup {
-    display: inline-block;
-  }
 
   main.container {
     width: 100%;
@@ -260,5 +242,67 @@ main p {
   main .left {
     width: 80%;
     margin: 0 auto;
+  }
+
+  main .right {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  main .right * {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+@media (max-width: 576px) {
+
+  .nav-toggle {
+    display: block;
+    
+  }
+
+  .nav .container {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .nav a {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav .logo {
+    margin-right: 0;
+    padding: 1em 0.5em;
+    border-bottom: 1px solid #23424a;
+  }
+
+  .nav ul {
+    display: none;
+    flex-direction: column;
+  }
+
+  .nav li {
+    width: 100%;
+  }
+
+  .nav-primary {
+    border-top: 1px solid #4b8391;
+    border-bottom: 1px solid #23424a;
+  }
+
+  .nav-secondary {
+    border-top: 1px solid #4b8391;
+  }
+
+  .nav .nav-secondary li + li {
+    margin-left: 0;
+  }
+
+  .nav .btn-signup {
+    border-radius: 0;
   }
 }
