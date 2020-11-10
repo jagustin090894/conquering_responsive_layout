@@ -4,10 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Conquering Rsponsive Layouts</title>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Oswald:wght@300;400;700&display=swap"
-            rel="stylesheet"
-        />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Oswald:wght@300;400;700&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
@@ -17,7 +14,11 @@
                     <img src="img/hamburger.svg" alt="" />
                 </button>
 
-                <a href="/" class="logo"> <img src="img/logo.svg" alt="" /> </a>
+                <div class="logo-wrap">
+                    <a href="/" class="logo">
+                        <img src="img/logo.svg" alt="" />
+                    </a>
+                </div>
 
                 <nav class="nav">
                     <ul class="nav-primary">
@@ -36,17 +37,22 @@
 
         <main class="main">
             <section class="hero">
-                <div class="container">
-                    <h1>
-                        Responsive layouts
-                        <span> don’t have to be a struggle </span>
-                    </h1>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua.
-                    </p>
-                    <a href="#" class="btn">I want to learn</a>
+                <div class="container row">
+                    <div class="col left">
+                        <h1>
+                            Responsive layouts
+                            <span> don’t have to be a struggle </span>
+                        </h1>
+                    </div>
+
+                    <div class="col right">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua.
+                        </p>
+                        <a href="#" class="btn">I want to learn</a>
+                    </div>
                 </div>
             </section>
 
@@ -82,7 +88,7 @@
             </section>
 
             <section class="section-3">
-                <div class="container">
+                <div class="container row">
                     <article class="col left">
                         <h2>It doesn’t have to be so hard</h2>
                         <p>
@@ -104,7 +110,7 @@
                         </p>
                     </article>
 
-                    <aside class="col">
+                    <aside class="col right">
                         <div class="box">
                             <h2>Break it down</h2>
                             <p>
@@ -183,5 +189,7 @@
                 </div>
             </div>
         </footer>
+
+        <script src="function.js"></script>
     </body>
 </html>
